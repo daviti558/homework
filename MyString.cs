@@ -284,4 +284,57 @@ internal class MyString
         }
         return substring(a, 0, b + 1);
     }
+      public static string Remove(string a, int b)
+  {
+      string c =  substring(a, 0, b);
+      return c;
+  }
+  public static string Remove(string a, int b,int c)
+  {
+      string d = substring(a, 0, b);
+      string e = substring(a, b + c);
+
+      return d + e;
+  }
+  public static string Insert(string a, string b, int c)
+  {
+      string result = "";
+      for (int i = 0; i <a.Length; i++)
+      {
+          if (i == c)
+          {
+              result += b;
+    
+          }
+          result += a[i];
+      }
+      return result;
+  }
+  public static string padleft(string a, int b)
+  {
+      string c = "";
+      int d = b - a.Length;
+      for (int i = 0; i< d; i++)
+      {
+          c += ' ';
+      }
+      c += a;
+      return c;
+  }
+  public static bool IsNullorEmpty(string a)
+  {
+      if (a == null || a.Length == 0)
+      {
+          return true;
+      }
+      else return false;
+  }
+  public static bool IsNullorWhtespace(string a)
+  {
+      if (a == null || a.Trim() == "")
+      {
+          return true;
+      }
+      else return false;
+  }
 }
